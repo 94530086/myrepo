@@ -1,0 +1,9 @@
+Origin: SK Box
+Label: Tccpg
+Suite: stable
+Version: 1.7
+Codename: Tccpg
+Architectures: iphoneos-arm
+Components: main
+Description: 由SK本人创建使用及规划
+
