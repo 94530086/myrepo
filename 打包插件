@@ -1,0 +1,4 @@
+cd /Users/sk/Documents/myrepo/deb
+dpkg-deb -b repackage 打包完成.deb
+
+echo "打包成功！"

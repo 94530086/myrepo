@@ -1,0 +1,5 @@
+cd /Users/sk/Documents/myrepo/deb
+dpkg -x 1.deb repackage/
+dpkg -e 1.deb repackage/DEBIAN
+
+echo "解压DEB成功！在deb目录下哦！"

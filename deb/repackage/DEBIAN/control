@@ -1,0 +1,10 @@
+Package: com.spark.nomoresmallapps1
+Name: NoMoreSmallApps1
+Depends: mobilesubstrate, com.spark.libsparkapplist
+Architecture: iphoneos-arm
+Description: Make all apps full screen on notched devices
+Maintainer: Spark
+Author: Spark
+Section: Tweaks
+Version: 2.0.0
+Installed-Size: 484
