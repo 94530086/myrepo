@@ -3,8 +3,8 @@
    "itemSize": "{263, 148}",
    "itemCornerRadius": 10,
    "banners": [{
-       "url": "https://repo-archive-cdn.dynastic.co/f8d974336e9f0d76ed9f964fa5cf1aca.png_750.png",
-       "title": "ShortLook",
+       "url": "https://cdn.dribbble.com/userupload/3592635/file/original-1a23fca011ca28c11e06d3ee45df830b.mp4",
+       "title": "欢迎主人",
        "package": "co.dynastic.ios.tweak.shortlook",
        "hideShadow": false
    }]
