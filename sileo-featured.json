@@ -7,10 +7,5 @@
        "title": "ShortLook",
        "package": "co.dynastic.ios.tweak.shortlook",
        "hideShadow": false
-   }, {
-       "url": "https://repo-archive-cdn.dynastic.co/007581d1f4ad3d84f1dd74e75b3e9268.png_750.png",
-       "title": "Gesto for iOS 13/14",
-       "package": "com.blackhole.Gesto13",
-       "hideShadow": false
    }]
 }
