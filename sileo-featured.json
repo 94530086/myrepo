@@ -1,11 +1,11 @@
 {
    "class": "FeaturedBannersView",
-   "itemSize": "{263, 148}",
+   "itemSize": "{310, 148}",
    "itemCornerRadius": 10,
    "banners": [{
        "url": "https://cdn.dribbble.com/userupload/3592635/file/original-1a23fca011ca28c11e06d3ee45df830b.mp4",
-       "title": "欢迎主人",
-       "package": "co.dynastic.ios.tweak.shortlook",
+       "title": "welcome home master！",
+       "package": "co.sk.shortlook",
        "hideShadow": false
    }]
 }
