@@ -1,0 +1,10 @@
+Package: com.nan.aential
+Name: Aential
+Architecture: iphoneos-arm
+Maintainer: zhaonan
+Author: zhaonan
+Section: Themes
+Version: 0.1.0
+Description: 基于 Sential 修改的主题
+SileoDepiction: https://invalidunit.github.io/sileodepiction/com.nan.theme/aential/js.json
+Icon: https://invalidunit.github.io/sileodepiction/com.nan.theme/aential/image.png
