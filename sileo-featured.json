@@ -1,19 +1,16 @@
-{  
-   "class":"FeaturedBannersView",
-   "itemSize":"{263, 148}",
-   "itemCornerRadius":10,
-   "banners":[  
-      {  
-         "url":"https://qr.maitube.com/blog/qr/pic/%E4%BA%8C%E7%BB%B4%E7%A0%81.png",
-         "title":"欢迎使用！",
-         "package":"com.sk.cc",
-         "hideShadow":false
-      }，
-      {  
-         "url":"https://qr.maitube.com/blog/qr/pic/%E4%BA%8C%E7%BB%B4%E7%A0%81.png",
-         "title":"欢迎使用！",
-         "package":"com.sk.cb",
-         "hideShadow":false
-      }
-   ]
+{
+   "class": "FeaturedBannersView",
+   "itemSize": "{263, 148}",
+   "itemCornerRadius": 10,
+   "banners": [{
+       "url": "https://repo-archive-cdn.dynastic.co/f8d974336e9f0d76ed9f964fa5cf1aca.png_750.png",
+       "title": "ShortLook",
+       "package": "co.dynastic.ios.tweak.shortlook",
+       "hideShadow": false
+   }, {
+       "url": "https://repo-archive-cdn.dynastic.co/007581d1f4ad3d84f1dd74e75b3e9268.png_750.png",
+       "title": "Gesto for iOS 13/14",
+       "package": "com.blackhole.Gesto13",
+       "hideShadow": false
+   }]
 }
