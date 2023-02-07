@@ -1,5 +1,5 @@
 cd /Users/sk/Documents/myrepo
-dpkg-scanpackages -m ./debs > ./Packages
-bzip2 -fks ./Packages
+dpkg-scanpackages -m ./debs > ./插件信息
+bzip2 -fks ./插件信息
 
 echo "生成成功！"

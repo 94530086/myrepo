@@ -1,10 +1,12 @@
-Package: com.spark.nomoresmallapps1
-Name: NoMoreSmallApps1
-Depends: mobilesubstrate, com.spark.libsparkapplist
+Package: com.niceios.niceiossb
+Description: 为NiceBarX提供天气定位服务..
+Version: 1.0.0-59
+Section: Localization
+Maintainer: NiceiOS
 Architecture: iphoneos-arm
-Description: Make all apps full screen on notched devices
-Maintainer: Spark
-Author: Spark
-Section: Tweaks
-Version: 2.0.0
-Installed-Size: 484
+Installed-Size: 180
+Name: NiceiOS
+Author: NiceiOS
+Sponsor: NiceiOS
+Icon: http://apt.jqmyjxj.com/icon/jqm_normal.png
+Tag: role:: NiceiOS
