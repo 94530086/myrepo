@@ -1,3 +1,21 @@
+Package: com.niceios.1
+Version: 1.0.0-59
+Architecture: iphoneos-arm
+Maintainer: NiceiOS
+Installed-Size: 180
+Filename: ./debs/打包完成.deb
+Size: 53700
+MD5sum: 0c975e5d6cb3d7e8a5155d9e9decf5fb
+SHA1: 2ba9fe2f884f7543bccddb3f81a48cdc71a6db07
+SHA256: cf6ac7149e8e30cfc5ddb89fd61a08ac284b300f974abb50232efcba7007f754
+Section: Localization
+Description: 为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务..
+Tag: role:: NiceiOS
+Author: NiceiOS
+Icon: http://apt.jqmyjxj.com/icon/jqm_normal.png
+Name: NiceiOS
+Sponsor: NiceiOS
+
 Package: com.spark.nomoresmallapps
 Version: 2.0.0
 Architecture: iphoneos-arm

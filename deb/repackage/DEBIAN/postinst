@@ -1,4 +1,0 @@
-#!/bin/sh
-echo "Rebuilding UICache,please wait... "
-su mobile -c uicache
-echo "UICache ok !"
