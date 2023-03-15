@@ -1,0 +1,103 @@
+{
+  "class": "DepictionTabView",
+  "headerImage": "https://sk-ball.github.io/myrepo/素材/top1.png",
+  "tintColor": "#FFD300",
+  "minVersion": "0.3",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "参考",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "Ivano Bilenchi <support@ib-soft.net>",
+          "title": "作者"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "7.10.0",
+          "title": "版本"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "iOS14.1",
+          "title": "支持"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "关于",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "1.0 源诞生",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "在Github上传源码，搭建了Sileo源。",
+          "useRawFormat": true
+        }
+      ],
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "2.0 修复便携性",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "增加了一键刷新源，自动打包插件以及解压插件。",
+          "useRawFormat": true
+        }
+      ],
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "2.51 美化源",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "增加了Sileo图标，完善了下载页面",
+          "useRawFormat": true
+        }
+      ]
+    }
+  ]
+}

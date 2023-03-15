@@ -1,0 +1,105 @@
+#!/bin/bash
+
+DIRNAME=$(cd $(dirname $0); pwd)
+
+REPACKAGE_PATH="$DIRNAME/deb/repackage"
+RELEASE_PATH="$DIRNAME/deb"
+CONTROL_PATH="$REPACKAGE_PATH/DEBIAN/control"
+POSTINST_PATH="$REPACKAGE_PATH/DEBIAN/postinst"
+PREINST_PATH="$REPACKAGE_PATH/DEBIAN/preinst"
+JSON_TEMP_PATH="$DIRNAME/插件详情.json"
+JSON_DIST_DIR_PATH="$DIRNAME/详情页"
+
+echo dirname: $DIRNAME
+echo control: $CONTROL_PATH
+echo json temp: $JSON_TEMP_PATH
+
+# 从 control 拿值
+function getValue() {
+  echo $(grep "^$1:" "$CONTROL_PATH" | sed "s/^$1:\s*//")
+}
+
+# 合法化正则替换值
+function legalizeRegexReplacement() {
+  echo $1 | sed 's,/,\\/,g'
+}
+
+echo Name: `getValue 'Name'`
+echo Description: `getValue 'Description'`
+echo Maintainer: `getValue 'Maintainer'`
+echo Version: `getValue 'Version'`
+
+Name="$(echo $(getValue 'Name') | tr ' ' '_')"
+Description="$(getValue 'Description')"
+Maintainer="$(getValue 'Maintainer')"
+Version="$(getValue 'Version')"
+
+# 合法化路径
+JSON_DIST_PATH="$JSON_DIST_DIR_PATH/$Name.json"
+echo "json dist: $JSON_DIST_PATH"
+
+mkdir -p "$JSON_DIST_DIR_PATH" && cp -rf "$JSON_TEMP_PATH" "$JSON_DIST_PATH" 
+
+# 替换 Description
+sed -i "" "s/<Description>/$Description/" "$JSON_DIST_PATH"
+# 替换 Maintainer
+# sed -i "" "s/<Maintainer>/$(legalizeRegexReplacement "$Maintainer")/" "$JSON_DIST_PATH"
+sed -i "" "s/<Maintainer>/$Maintainer/" "$JSON_DIST_PATH"
+# 替换 Version
+sed -i "" "s/<Version>/$Version/" "$JSON_DIST_PATH"
+
+function updateControl() {
+  local key=$1
+  local value=$2
+
+  if grep -q "^$key:" "$CONTROL_PATH"; then
+    # Key already exists in file, replace the value
+    sed -i "" "s/^$key:.*/$key: $value/" "$CONTROL_PATH"
+  else
+    # Key does not exist in file, append the key-value pair to the end of the file
+    echo "$key: $value" >> "$CONTROL_PATH"
+  fi
+}
+
+function addIfNotExistControl() {
+  local key=$1
+  local value=$2
+
+  if grep -q "^$key:" "$CONTROL_PATH"; then
+    # Key already exists in file, ignore
+    echo ""
+  else
+    # Key does not exist in file, append the key-value pair to the end of the file
+    echo "$key: $value" >> "$CONTROL_PATH"
+  fi
+}
+
+REPO_HTTP_BASE_URL="https://sk-ball.github.io/myrepo/"
+REPO_HTTP_JSON_BASE_URL="https://sk-ball.github.io/myrepo/详情页"
+
+
+# 添加 SileoDepiction 路径
+# updateControl "SileoDepiction" $(legalizeRegexReplacement "$REPO_HTTP_JSON_BASE_URL/$(basename $JSON_DIST_PATH)")
+updateControl "SileoDepiction" "$REPO_HTTP_JSON_BASE_URL/$(basename $JSON_DIST_PATH)"
+
+# 添加 Icon
+# updateControl "Icon" $(legalizeRegexReplacement "https://sk-ball.github.io/myrepo/素材/icon.png")
+updateControl "Icon" "https://sk-ball.github.io/myrepo/素材/icon.png"
+
+# 如果没有 Description 添加一个空的
+# updateControl "Description" "$Description"
+addIfNotExistControl "Description" "还没有简介哦~"
+
+
+# chmod
+chmod 755 "$CONTROL_PATH"
+chmod 755 "$POSTINST_PATH"
+chmod 755 "$PREINST_PATH"
+
+# dpkg
+PKG_NAME="$RELEASE_PATH/$Name.deb"
+rm -f "$PKG_NAME"
+
+dpkg-deb -b "$REPACKAGE_PATH" "$PKG_NAME"
+# clean
+rm -rf "$REPACKAGE_PATH"

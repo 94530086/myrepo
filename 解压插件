@@ -1,8 +1,78 @@
-cd /Users/sk/Documents/myrepo/deb
-dpkg -x 1.deb repackage/
-dpkg -e 1.deb repackage/DEBIAN
-sudo chmod -R 777 /Users/sk/Documents/myrepo/deb/repackage/DEBIAN/control
-sudo chmod -R 777 /Users/sk/Documents/myrepo/deb/repackage/DEBIAN/postinst
+#!/bin/bash
+
+DIRNAME=$(cd $(dirname $0); pwd)
+
+BASE_PATH="$DIRNAME/deb"
+REPACKAGE_PATH="$BASE_PATH/repackage"
+CONTROL_PATH="$REPACKAGE_PATH/DEBIAN/control"
+POSTINST_PATH="$REPACKAGE_PATH/DEBIAN/postinst"
+PREINST_PATH="$REPACKAGE_PATH/DEBIAN/preinst"
+
+# 目录覆盖提醒
+if [ -e "$REPACKAGE_PATH" ]; then
+  if ! osascript -e 'tell app "System Events" to display alert "已存在 repackage 目录，是否覆盖？" buttons {"否", "是"}' -e 'button returned of result' | grep -q "是"; then
+    exit 1
+  fi
+fi
+
+# 进入到 deb 目录
+cd "$BASE_PATH"
+rm -rf "$REPACKAGE_PATH"
+
+function unpack() {
+  filename=$1
+
+  # 解压插件到库目录
+  dpkg -x "$filename" "$REPACKAGE_PATH"
+  # 解压插件到插件详情
+  dpkg -e "$filename" "$REPACKAGE_PATH/DEBIAN"  
+}
+
+# 查找所有 .deb 文件存为数组
+# debs=($(find . -type f -name "*.deb" -print0 | xargs -0))
+# 查找第一个 .deb 文件
+deb=($(find . -type f -name "*.deb" -print -quit))
+
+unpack $deb
+
+# 修改文件 777 权限，解锁不可更改
+chmod -R 777 "$CONTROL_PATH"
+chmod -R 777 "$POSTINST_PATH"
+chmod -R 777 "$PREINST_PATH"
+
+# 清空 Section
+sed -i "" "s/^Section:.*/Section: /" "$CONTROL_PATH"
+# 替换 Sponsor
+sed -i "" "s/^Sponsor:.*/Sponsor: 1@q.com/" "$CONTROL_PATH"
+
+function addIfNotExistControl() {
+  local key=$1
+  local value=$2
+
+  if grep -q "^$key:" "$CONTROL_PATH"; then
+    # Key already exists in file, ignore
+    echo ""
+  else
+    # Key does not exist in file, append the key-value pair to the end of the file
+    echo "$key: $value" >> "$CONTROL_PATH"
+  fi
+}
+
+# 如果没有 Description 添加一个空的
+addIfNotExistControl "Description" "还没有简介哦~"
+
+# 调用文本文档打开 control 文件
+open -e "$CONTROL_PATH"                  
+
+# 弹窗告知插件已经解压成功，并在指定目录下。
+/usr/bin/osascript <<-EOF
+
+    tell application "System Events"
+        activate
+        display dialog "解压成功，在 deb 目录下，现在为您打开 control 文件，方便您编辑！"
+    end tell
+
+EOF
 
 
-echo "解压DEB成功！在deb目录下哦！"
+

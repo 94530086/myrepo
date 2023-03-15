@@ -1,34 +1,20 @@
-Package: com.niceios.1
-Version: 1.0.0-59
+Package: sk.tool.icleanerpro
+Version: 7.10.0
 Architecture: iphoneos-arm
-Maintainer: NiceiOS
-Installed-Size: 180
-Filename: ./debs/打包完成.deb
-Size: 54304
-MD5sum: 87da9485c0fc30007386305590c8a9b4
-SHA1: 11eb5c60492b6ebd5038330d58391d132f0cf024
-SHA256: b7ee8dcb2b480d921f721e1124263797a3d930d1a113944192e6116457f8617e
-Section: Localization
-Description: 为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务.为NiceBarX提供天气定位服务..
-Author: NiceiOS
-Icon: https://invalidunit.github.io/sileodepiction/com.nan.theme/aential/image.png
-Name: NiceiOS
-Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.theme/aential/js.json
-Sponsor: NiceiOS
-
-Package: com.spark.nomoresmallapps
-Version: 2.0.0
-Architecture: iphoneos-arm
-Maintainer: Spark
-Installed-Size: 484
-Depends: mobilesubstrate, com.spark.libsparkapplist
-Filename: ./debs/NoMoreSmallApp.deb
-Size: 123256
-MD5sum: cfeefbbae856c2287cc0904b274f985e
-SHA1: b602098b57da7b14f5cea728bade8c012c5d0688
-SHA256: 5eccbf51cc1ef2ed7f5df1993353c7851081a095b7aadb083edbdc677537bf96
-Section: Tweaks
-Description: Make all apps full screen on notched devices
-Author: Spark
-Name: NoMoreSmallApps
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Conflicts: org.altervista.exilecom.icleaner
+Replaces: org.altervista.exilecom.icleaner
+Filename: ./debs/iCleaner_Pro.deb
+Size: 2451056
+MD5sum: a2a1bffed8fb447b01f77104e9e3b65a
+SHA1: 9532bf4ccec10560374b0cc04ba29062751eb775
+SHA256: 7c705bb13c7c4f3413f01955382789a9f3d289a0fd3691f7275fda9cdc86a113
+Section: 插件
+Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.
+Author: Ivano Bilenchi <support@ib-soft.net>
+Icon: https://sk-ball.github.io/myrepo/素材/Napkins.png
+Name: iCleaner Pro
+Sileodepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
+Sponsor: 1@q.com
 

@@ -1,6 +1,0 @@
-sudo chmod -R 775 /Users/sk/Documents/myrepo/deb/repackage/DEBIAN/control
-sudo chmod -R 775 /Users/sk/Documents/myrepo/deb/repackage/DEBIAN/postinst
-cd /Users/sk/Documents/myrepo/deb
-dpkg-deb -b repackage 打包完成.deb
-
-echo "打包成功！"
