@@ -1,3 +1,21 @@
+Package: com.nan.bioprotectxs.zh-hans
+Version: 0.1.0
+Architecture: iphoneos-arm
+Maintainer: zhaonan
+Depends: net.limneos.bioprotectxs
+Replaces: net.limneos.bioprotectxs
+Filename: ./debs/com.nan.bioprotectxs.zh-hans_0.1.0_iphoneos-arm.deb
+Size: 4572
+MD5sum: a6af1e1797c225085650dd66f13c874e
+SHA1: 02bd6763d6e73a9f6f2dd2cc537b5e1b44d374b2
+SHA256: 73cf51e8d9aee36a013764174c48a16eb63d4e9fc2ef0b9629ef461e908e82e0
+Section: Localization
+Description: 为 BioProtect XS 提供简体中文
+Author: zhaonan
+Icon: https://invalidunit.github.io/sileodepiction/com.nan.zh-Hans/net.limneos.bioprotectxs/image.png
+Name: zh-Hans for BioProtect XS
+Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.zh-Hans/net.limneos.bioprotectxs/js.json
+
 Package: sk.tool.icleanerpro
 Version: 7.10.0
 Architecture: iphoneos-arm
