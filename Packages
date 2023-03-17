@@ -1,21 +1,3 @@
-Package: com.nan.bioprotectxs.zh-hans
-Version: 0.1.0
-Architecture: iphoneos-arm
-Maintainer: zhaonan
-Depends: net.limneos.bioprotectxs
-Replaces: net.limneos.bioprotectxs
-Filename: ./debs/com.nan.bioprotectxs.zh-hans_0.1.0_iphoneos-arm.deb
-Size: 4572
-MD5sum: a6af1e1797c225085650dd66f13c874e
-SHA1: 02bd6763d6e73a9f6f2dd2cc537b5e1b44d374b2
-SHA256: 73cf51e8d9aee36a013764174c48a16eb63d4e9fc2ef0b9629ef461e908e82e0
-Section: Localization
-Description: 为 BioProtect XS 提供简体中文
-Author: zhaonan
-Icon: https://invalidunit.github.io/sileodepiction/com.nan.zh-Hans/net.limneos.bioprotectxs/image.png
-Name: zh-Hans for BioProtect XS
-Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.zh-Hans/net.limneos.bioprotectxs/js.json
-
 Package: sk.tool.icleanerpro
 Version: 7.10.0
 Architecture: iphoneos-arm
@@ -24,15 +6,14 @@ Depends: firmware (>= 4.0), findutils, apt | apt7
 Conflicts: org.altervista.exilecom.icleaner
 Replaces: org.altervista.exilecom.icleaner
 Filename: ./debs/iCleaner_Pro.deb
-Size: 2451056
-MD5sum: a2a1bffed8fb447b01f77104e9e3b65a
-SHA1: 9532bf4ccec10560374b0cc04ba29062751eb775
-SHA256: 7c705bb13c7c4f3413f01955382789a9f3d289a0fd3691f7275fda9cdc86a113
+Size: 2451356
+MD5sum: 37902792a15f1dd20d895bfe184b5d1e
+SHA1: cb599f99d46c4bd941295fe8084d080f58a5af44
+SHA256: a90cc1f6e8f2c3c857ac03a5e1cb82e0c91486f3d9c6512dac683078b106ef70
 Section: 插件
-Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.
+Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.SileoDepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
 Author: Ivano Bilenchi <support@ib-soft.net>
 Icon: https://sk-ball.github.io/myrepo/素材/Napkins.png
 Name: iCleaner Pro
-Sileodepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
 Sponsor: 1@q.com
 
