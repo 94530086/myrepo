@@ -6,14 +6,15 @@ Depends: firmware (>= 4.0), findutils, apt | apt7
 Conflicts: org.altervista.exilecom.icleaner
 Replaces: org.altervista.exilecom.icleaner
 Filename: ./debs/iCleaner_Pro.deb
-Size: 2451356
-MD5sum: 37902792a15f1dd20d895bfe184b5d1e
-SHA1: cb599f99d46c4bd941295fe8084d080f58a5af44
-SHA256: a90cc1f6e8f2c3c857ac03a5e1cb82e0c91486f3d9c6512dac683078b106ef70
+Size: 2452452
+MD5sum: 8fcf18b2183913b5eb44091bc21f4171
+SHA1: 588f4150670ab3b97f14c6312f93a8dea3f09a69
+SHA256: d4a04d0587e17ca9323604c1dc29dd50cbc8a3becada59ed3a3c953dad579ff1
 Section: 插件
-Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.SileoDepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
+Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.
 Author: Ivano Bilenchi <support@ib-soft.net>
 Icon: https://sk-ball.github.io/myrepo/素材/Napkins.png
 Name: iCleaner Pro
+Sileodepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
 Sponsor: 1@q.com
 
