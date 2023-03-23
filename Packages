@@ -10,6 +10,7 @@ SHA1: fcec627eb30c55436084d114ad7d612e12b9d02d
 SHA256: a1981d00866ad6f1d5ed8ffc3b821fe0b2163a86ad5a9780ce4c22d7452e8da5
 Section: 插件
 Priority: optional
+Description: 老猫开发的微信助手
 Author: Mao
 Icon: https://sk-ball.github.io/myrepo/素材/icon.png
 Name: 微信助手
