@@ -1,20 +1,19 @@
-Package: sk.tool.icleanerpro
-Version: 7.10.0
+Package: sk.25mao.MiYou
+Version: 3.5-4
 Architecture: iphoneos-arm
-Maintainer: Ivano Bilenchi <support@ib-soft.net>
-Depends: firmware (>= 4.0), findutils, apt | apt7
-Conflicts: org.altervista.exilecom.icleaner
-Replaces: org.altervista.exilecom.icleaner
-Filename: ./debs/iCleaner_Pro.deb
-Size: 2452452
-MD5sum: 8fcf18b2183913b5eb44091bc21f4171
-SHA1: 588f4150670ab3b97f14c6312f93a8dea3f09a69
-SHA256: d4a04d0587e17ca9323604c1dc29dd50cbc8a3becada59ed3a3c953dad579ff1
+Maintainer: admin@25mao.com
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/微信助手.deb
+Size: 6280332
+MD5sum: dce85ba36d926dbfe8bed1e85b087938
+SHA1: fcec627eb30c55436084d114ad7d612e12b9d02d
+SHA256: a1981d00866ad6f1d5ed8ffc3b821fe0b2163a86ad5a9780ce4c22d7452e8da5
 Section: 插件
-Description: iOS系统清洁和优化，支持Safari缓存清理，App应用程序清理，删除OTA已经下载的固件，包括电池数据等系统缓存文件，指定文件清理，可设置插件启动项等功能，此插件为正版.
-Author: Ivano Bilenchi <support@ib-soft.net>
-Icon: https://sk-ball.github.io/myrepo/素材/Napkins.png
-Name: iCleaner Pro
-Sileodepiction: https://sk-ball.github.io/myrepo/详情页/iCleaner_Pro.json
+Priority: optional
+Description: 老猫开发的微信助手
+Author: Mao
+Icon: https://sk-ball.github.io/myrepo/素材/icon.png
+Name: 微信助手
+Sileodepiction: https://sk-ball.github.io/myrepo/详情页/微信助手.json
 Sponsor: 1@q.com
 

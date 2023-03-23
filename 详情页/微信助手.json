@@ -1,0 +1,83 @@
+{
+  "class": "DepictionTabView",
+  "headerImage": "https://invalidunit.github.io/sileodepiction/Default/top.png",
+  "tintColor": "#FDD5DE",
+  "minVersion": "0.3",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "描述",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "简介",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "老猫开发的微信助手",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "详情",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 8
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "admin@25mao.com",
+          "title": "作者"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "3.5-4",
+          "title": "版本"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "text": "2023 年 03 月 23 日",
+          "title": "最后更新日期"
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 16
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "0.1.0",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "初始版本",
+          "useRawFormat": true
+        }
+      ]
+    }
+  ]
+}

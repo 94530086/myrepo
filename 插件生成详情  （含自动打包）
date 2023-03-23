@@ -33,6 +33,7 @@ Name="$(echo $(getValue 'Name') | tr ' ' '_')"
 Description="$(getValue 'Description')"
 Maintainer="$(getValue 'Maintainer')"
 Version="$(getValue 'Version')"
+LatestUpdateDate=$(date +"%Y 年 %m 月 %d 日")
 
 # 合法化路径
 JSON_DIST_PATH="$JSON_DIST_DIR_PATH/$Name.json"
@@ -47,6 +48,8 @@ sed -i "" "s/<Description>/$Description/" "$JSON_DIST_PATH"
 sed -i "" "s/<Maintainer>/$Maintainer/" "$JSON_DIST_PATH"
 # 替换 Version
 sed -i "" "s/<Version>/$Version/" "$JSON_DIST_PATH"
+# 替换 LatestUpdateDate
+sed -i "" "s/<LatestUpdateDate>/$LatestUpdateDate/" "$JSON_DIST_PATH"
 
 function updateControl() {
   local key=$1
@@ -54,7 +57,7 @@ function updateControl() {
 
   if grep -q "^$key:" "$CONTROL_PATH"; then
     # Key already exists in file, replace the value
-    sed -i "" "s/^$key:.*/$key: $value/" "$CONTROL_PATH"
+    sed -i ".bak" "s/^$key:.*/$key: $value/" "$CONTROL_PATH"
   else
     # Key does not exist in file, append the key-value pair to the end of the file
     echo "$key: $value" >> "$CONTROL_PATH"
